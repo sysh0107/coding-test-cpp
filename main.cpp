@@ -1,23 +1,18 @@
-// 10170번 NFC West vs North
+// 3003번 킹, 퀸, 룩, 비숍, 나이트, 폰
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
 
-	cout << "NFC West       W   L  T\n";
-	cout << "-----------------------\n";
-	cout << "Seattle        13  3  0\n";
-	cout << "San Francisco  12  4  0\n";
-	cout << "Arizona        10  6  0\n";
-	cout << "St. Louis      7   9  0\n";
-	cout << "\n";
-	cout << "NFC North      W   L  T\n";
-	cout << "-----------------------\n";
-	cout << "Green Bay      8   7  1\n";
-	cout << "Chicago        8   8  0\n";
-	cout << "Detroit        7   9  0\n";
-	cout << "Minnesota      5  10  1\n";
+	int king, queen, look, bi, kni, pone;
+	cin >> king >> queen >> look >> bi >> kni >> pone;
+	cout << 1 - king << " ";
+	cout << 1 - queen << " ";
+	cout << 2 - look << " ";
+	cout << 2 - bi << " ";
+	cout << 2 - kni << " ";
+	cout << 8 - pone;
 
 	return 0;
 }
