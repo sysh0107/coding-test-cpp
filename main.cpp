@@ -1,20 +1,15 @@
-// 2845번 파티가 끝나고 난 뒤
+// 9654번 나부 함대 데이터
 #include <iostream>
 using namespace std;
 
 int main() {
-	int L, P;
-	int p1, p2, p3, p4, p5;
-	cin >> L >> P;
-	cin >> p1 >> p2 >> p3 >> p4 >> p5;
-
-	int num;
-	num = L * P;
-	cout << p1 - num << ' ';
-	cout << p2 - num << ' ';
-	cout << p3 - num << ' ';
-	cout << p4 - num << ' ';
-	cout << p5 - num;
-
+	
+	cout << "SHIP NAME      CLASS          DEPLOYMENT IN SERVICE\n";
+	cout << "N2 Bomber      Heavy Fighter  Limited    21        \n";
+	cout << "J-Type 327     Light Combat   Unlimited  1         \n";
+	cout << "NX Cruiser     Medium Fighter Limited    18        \n";
+	cout << "N1 Starfighter Medium Fighter Unlimited  25        \n";
+	cout << "Royal Cruiser  Light Combat   Limited    4         \n";
+	
 	return 0;
 }
