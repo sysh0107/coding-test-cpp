@@ -1,19 +1,13 @@
-// 5339번 콜센터
+// 10926번 ??!
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-	
-	cout << "     /~\\\n";
-	cout << "    ( oo|\n";
-	cout << "    _\\=/_\n";
-	cout << "   /  _  \\\n";
-	cout << "  //|/.\\|\\\\\n";
-	cout << " ||  \\ /  ||\n";
-	cout << "============\n";
-	cout << "|          |\n";
-	cout << "|          |\n";
-	cout << "|          |\n";
-	
+	string id;
+
+	cin >> id;
+	cout << id + "??!";
+
 	return 0;
 }
