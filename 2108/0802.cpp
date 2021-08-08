@@ -153,3 +153,34 @@ int main() {
 
 	return 0;
 }
+
+// 10797번 10부제
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+
+	int day, c1, c2, c3, c4, c5, cnt;
+	cin >> day >> c1 >> c2 >> c3 >> c4 >> c5;
+	cnt = 0;
+	
+	if(c1 == day){
+		cnt += 1;
+	}
+	if(c2 == day){
+		cnt += 1;
+	}
+	if(c3 == day){
+		cnt += 1;
+	}
+	if(c4 == day){
+		cnt += 1;
+	}
+	if(c5 == day){
+		cnt += 1;
+	}
+	cout << cnt;
+
+	return 0;
+}
