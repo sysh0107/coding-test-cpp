@@ -1,19 +1,25 @@
-// 2420번 사파리월드
+// 2530번 인공지능 시계
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
 	
-	long long a, b = 0;
-	long result = 0;
+	int a, b, c = 0;
+	int time = 0;
+	int need_time;
+	int r_a, r_b, r_c = 0;
 	
-	cin >> a>>b;
+	cin >> a>>b>>c;
+	cin >> need_time;
 
-	result = a - b;
+	time = a * 3600 + b * 60 + c + need_time;
+	r_a = time / 3600;
+	r_a %= 24;
+	r_b = time % 3600 / 60;
+	r_c = time % 60;
 
-	if(result > 0) cout << result;
-	else cout << -result;
+	cout << r_a<<' '<<r_b<<' '<<r_c;
 
 	return 0;
 }
