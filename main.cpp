@@ -1,25 +1,29 @@
-// 2522번 별 찍기 - 12
+// 1009번 분산처리
 #include <iostream>
 #include <string>
+#include <math.h>
 using namespace std;
 
 int main() {
 	
-	int a = 0;
-	cin >> a;
+	int T = 0;
+	cin >> T;
 
-	for(int i = 0; i < a; i++){
-		for(int j = 0; j < a-i-1; j++){ cout << " "; }
+	for(int i = 0; i < T; i++){
+		
+		int a, b = 0;
+		int result = 1;
+		cin >> a>>b;
 
-		for(int s = 0; s < i + 1; s++){ cout << "*"; }
-		cout << endl;
-	}
-	for(int i = 0; i < a-1; i++){
-		for(int s = 0; s < i + 1; s++){ cout << " "; }
-
-		for(int j = 0; j < a-i-1; j++){ cout << "*"; }
-
-		cout << endl;
+		for(int j = 0; j < b; j++){
+			result *= a;
+			result %= 10;
+			//cout << result<<"_";
+		}
+		if(result == 0){
+			result = 10;
+		}
+		cout << result<<"\n";
 	}
 
 	return 0;
