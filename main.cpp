@@ -1,4 +1,4 @@
-// 5086번 배수와 약수
+// 2501번 약수 구하기
 #include <iostream>
 #include <string>
 #include <math.h>
@@ -6,23 +6,20 @@ using namespace std;
 
 int main() {
 	
-	while(1){
-		int a, b = 0;
-
-		cin >> a>>b;
-		if(a == 0){
-			break;
+	int a, b, cnt = 0;
+	cin >> a>>b;
+	
+	for(int i = 1; i <= a; i++){
+		
+		if(a % i == 0){
+			cnt++;
 		}
-		else if(a % b == 0){
-			cout << "multiple\n";
-		}
-		else if(b % a == 0){
-			cout << "factor\n";
-		}
-		else{
-			cout << "neither\n";
+		if(cnt == b){
+			cout << i;
+			return 0;
 		}
 	}
+	cout << 0;
 	
 	return 0;
 }
