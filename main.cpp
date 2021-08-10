@@ -1,4 +1,4 @@
-// 2480번 주사위 세개
+// 10156번 과자
 #include <iostream>
 #include <string>
 using namespace std;
@@ -10,22 +10,14 @@ int main() {
 	
 	cin >> a>>b>>c;
 
-	if(a == b && a == c){
-		result = 10000 + a * 1000;
-	}
-	else if(a == b || a == c){
-		result = 1000 + a * 100;
-	}
-	else if(b == c){
-		result = 1000 + b* 100;
-	}
-	else{
-		if(a < b) a = b;
-		if(a < c) a = c;
-		result = a * 100;
-	}
+	result = a * b - c;
 
-	cout << result;
+	if(result > 0){
+		cout << result;
+	}
+	else {
+		cout << 0;
+	}
 
 	return 0;
 }
