@@ -203,7 +203,7 @@ int main() {
 
 	return 0;
 }
-// 1009번 분산처리
+// 2576번 홀수
 #include <iostream>
 #include <string>
 #include <math.h>
