@@ -1,25 +1,26 @@
-// 2530번 인공지능 시계
+// 2522번 별 찍기 - 12
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
 	
-	int a, b, c = 0;
-	int time = 0;
-	int need_time;
-	int r_a, r_b, r_c = 0;
-	
-	cin >> a>>b>>c;
-	cin >> need_time;
+	int a = 0;
+	cin >> a;
 
-	time = a * 3600 + b * 60 + c + need_time;
-	r_a = time / 3600;
-	r_a %= 24;
-	r_b = time % 3600 / 60;
-	r_c = time % 60;
+	for(int i = 0; i < a; i++){
+		for(int j = 0; j < a-i-1; j++){ cout << " "; }
 
-	cout << r_a<<' '<<r_b<<' '<<r_c;
+		for(int s = 0; s < i + 1; s++){ cout << "*"; }
+		cout << endl;
+	}
+	for(int i = 0; i < a-1; i++){
+		for(int s = 0; s < i + 1; s++){ cout << " "; }
+
+		for(int j = 0; j < a-i-1; j++){ cout << "*"; }
+
+		cout << endl;
+	}
 
 	return 0;
 }
