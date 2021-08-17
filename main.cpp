@@ -1,4 +1,4 @@
-// 2953번 나는 요리사다
+// 5565번 영수증
 #include <iostream>
 #include <string>
 #include <math.h>
@@ -7,27 +7,14 @@ using namespace std;
 
 int main() {
 	
-	int arr[5][4];
-	int sum, max_ = 0;
-	int cook = 0;
-
-	for(int i = 0; i < 5; i++){
-		for(int j = 0; j < 4; j++){
-			cin >> arr[i][j];
-		}
+	int sum = 0;
+	cin >> sum;
+	int books[9];
+	for(int i = 0; i < 9; i++){
+		cin >> books[i];
+		sum -= books[i];
 	}
-
-	for(int i = 0; i < 5; i++){
-		sum = 0;
-		for(int j = 0; j < 4; j++){
-			sum += arr[i][j]
-		}
-		if(sum > max_){
-			cook = i + 1;
-			max_ = sum;
-		}
-	}
-	cout << cook<<''<<max_;
+	cout << sum;
 
 	return 0;
 }
