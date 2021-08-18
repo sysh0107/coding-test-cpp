@@ -1,4 +1,4 @@
-// 2953번 나는 요리사다
+// 7567번 그릇
 #include <iostream>
 #include <string>
 using namespace std;
@@ -9,22 +9,16 @@ int main() {
 	cin.tie(nullptr);
 	cout.tie(nullptr);
 
-	int score[5][4];
-	int winner, winner_score = 0;
-	int store = 0;
+	string bowls;
+	cin >> bowls;
 
-	for(int i = 0; i < 5; i++){
-		int store = 0;
-		for(int j = 0; j < 4; j++){
-			cin >> score[i][j];
-			store += score[i][j];
-		}
-		if(store > winner_score){
-			winner = i + 1;
-			winner_score = store;
-		}
+	int result = 10;
+
+	for(int i = 1; i < bowls.size(); i++){
+		if(bowls[i] != bowls[i - 1])result += 10;
+		else result += 5;
 	}
-	cout << winner <<' '<< winner_score;
+	cout << result;
 	
 	return 0;
 }
