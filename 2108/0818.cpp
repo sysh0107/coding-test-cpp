@@ -1,4 +1,6 @@
 // 1373번 2진수 8진수
+
+// 1373번 2진수 8진수
 #include <iostream>
 #include <string>
 using namespace std;
