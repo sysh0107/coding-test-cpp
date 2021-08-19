@@ -1,23 +1,26 @@
-// 1100번 하얀 칸
+// 1373번 2진수 8진수
 #include <iostream>
 #include <string>
+#include <vector>
+
 using namespace std;
 
 int main() {
 
-	char board[8][8];
-	int result = 0;
+	string s;
+	cin >> s;
 
-	for(int i = 0; i < 8; i++){
-		for(int j = 0; j < 8; j++){
-			cin >> board[i][j];
-			if((i%2 == 0&&j%2 == 0&&board[i][j] == 'F') ||
-			(i%2 == 1&&j%2 == 1&&board[i][j] == 'F')){
-				result += 1;
-			}
-		}
+	int sz = s.size();
+	if(sz % 3 == 1){
+		cout << s[0];
 	}
-	cout << result;
-	
+	else if(sz % 3 == 2){
+		cout << (s[0] - '0') * 2 + (s[1] - '0');
+	}
+	for(int i = sz %3; i < sz; i += 3){
+		cout
+	}
+
+	cout << bi;
 	return 0;
 }
