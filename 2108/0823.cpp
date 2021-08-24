@@ -1,3 +1,7 @@
+// 1373번 2진수 8진수
+
+// 10798번 세로읽기
+
 // 11728번 배열 합치기
 #include <iostream>
 #include <string>
