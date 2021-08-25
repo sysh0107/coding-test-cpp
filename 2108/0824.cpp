@@ -1,3 +1,5 @@
+// 1292번 쉽게 푸는 문제
+
 // 1789번 수들의 합
 #include <iostream>
 #include <string>
