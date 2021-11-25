@@ -1,27 +1,53 @@
-// 1373번 2진수 8진수
+// 10845번 큐
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <queue>
 
 using namespace std;
 
 int main() {
 	ios_base :: sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 	
-	string num;
-	cin >> num;
+	string s;
+	queue<int> q;
+	int n;
+	cin >> n;
 
-	if(num.length() % 3 == 1){
-		cout << num[1] - '0';
-	}
-	else if(num.length() % 3 == 2){
-		cout << (num[0] - '0') * 2 + num[1] - '0';
+	while (n--){
+		cin >> s;
+		if(s == "push"){
+			int tmp;
+			cin >> tmp;
+			q.push(tmp);
+		}
+		else if(s == "pop"){
+			if(q.empty() == 0){
+				cout << q.front() << endl;
+				q.pop();
+			}else{
+				cout << -1 << endl;
+			}
+		}
+		else if(s == "size"){
+			cout << q.size() << endl;
+		}
+		else if(s == "front"){
+			if(q.empty() == 0){
+				cout << q.front() << endl;
+			}else{
+				cout << -1 << endl;
+			}
+		}
+		else if(s == "back"){
+			if(q.empty() == 0){
+				cout << q.back() << endl;
+			}else{
+				cout << -1 << endl;
+			}
+		}
 	}
 
-	for(int i = num.length() % 3; i < num.length(); i += 3){
-		cout << (num[i] - '0') * 4 + (num[i + 1] - '0') * 2 + num[i + 2] - '0';
-	}
-	
 	return 0;
 }
